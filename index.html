@@ -21,14 +21,98 @@
 <body>
     <header>
         <div>
-            
+            <div class="navbar lg:px-14">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a>Home</a></li>
+                            <li><a>About</a></li>
+                            <li><a>Destination</a></li>
+                            <li><a>Search</a></li>
+                        </ul>
+                    </div>
+                    <a class="btn btn-ghost text-xl">P-Ticket</a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1">
+                        <li value="font-raleway text-xl font-semibold"><a>Home</a></li>
+                        <li value="font-raleway text-xl font-semibold"><a>About</a></li>
+                        <li value="font-raleway text-xl"><a>Destination</a></li>
+                        <li value="font-raleway text-xl font-semibold"><a>Search</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-end">
+                    <a class="btn">Bus <img src="images/bus-icon.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex items-center justify-center bg-[url(images/banner.png)] h-screen bg-no-repeat bg-center">
+            <div class="text-center space-y-6">
+                <h1 class="text-6xl font-extrabold font-inter text-white">End-to-End Travel with</h1>
+                <h1 class="text-6xl font-extrabold font-inter text-green-500">P Paribahan</h1>
+                <p class="font-inter text-base font-normal text-white w-9/12 mx-auto">Yes, you can run unit tests and
+                    view the results directly within the app. The integrated testing features allow for a streamlined .
+                </p>
+                <div>
+                    <button class="bg-green-500 px-5 py-4 text-xl font-semibold rounded-lg">Buy Tickets</button>
+                </div>
+            </div>
+        </div>
+        <div class="relative">
+            <div
+                class="flex lg:flex-row flex-col items-center justify-center gap-6 lg:absolute lg:bottom-2 lg:translate-x-[27%]">
+                <div class="flex gap-4 items-center rounded-lg bg-white px-7 py-4">
+                    <div>
+                        <img src="images/people.png" alt="">
+                    </div>
+                    <div class="space-y-2">
+                        <h1 class="font-inter text-3xl font-bold">500K+</h1>
+                        <p class="text-[#03071299] text-base font-normal font-inter">Registered users</p>
+                    </div>
+                </div>
+                <div class="flex gap-4 items-center rounded-lg bg-white px-7 py-4">
+                    <div>
+                        <img src="images/ticket-cupon.png" alt="">
+                    </div>
+                    <div class="space-y-2">
+                        <h1 class="font-inter text-3xl font-bold">1.7 lacks</h1>
+                        <p class="text-[#03071299] text-base font-normal font-inter">Tickets sold</p>
+                    </div>
+                </div>
+                <div class="flex gap-4 items-center rounded-lg bg-white px-7 py-4">
+                    <div>
+                        <img src="images/stoppage.png" alt="">
+                    </div>
+                    <div class="space-y-2">
+                        <h1 class="font-inter text-3xl font-bold">80K+</h1>
+                        <p class="text-[#03071299] text-base font-normal font-inter">Rental partners</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
     <!-- main section start -->
-    <main>
-        <section>
+    <main class="container mt-20 lg:px-12">
+        <section class="">
+            <h2 class="text-3xl text-center font-bold font-inter">Best offers for You</h2>
 
+            <div>
+                <div class="space-y-2 bg-[#FFBF0F] px-5 py-7 ">
+                    <h2 class="font-inter text-3xl font-bold #030712CC offer">15% OFF</h2>
+                    <p class="text-lg font-bold font-inter #030712CC">on your next purchase</p>
+                    <p class="text-base #03071280">use by January 2024</p>
+                </div>
+            </div>
         </section>
     </main>
     <!-- main section end -->
