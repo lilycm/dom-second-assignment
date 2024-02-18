@@ -72,27 +72,23 @@ const aplyCouponButton = document.getElementById('aply');
 aplyCouponButton.addEventListener('click', function () {
     // total price
 
-    const fixedPrice = document.getElementById('fixed-price').innerText;
     let totalBudget = 0;
 
     const totalPrice = document.getElementById('total-price').innerText;
     const convertedTotalPrice = parseInt(totalPrice);
-    let sum = convertedTotalPrice + parseInt(fixedPrice);
-
 
     // grand total
 
-    // const grandTotal = document.getElementById('grand-total').innerText;
-    // const convertedGrandTotal = parseInt(grandTotal);
-    // let sum2 = convertedGrandTotal + parseInt(fixedPrice);
-    // document.getElementById('grand-total').innerText = sum2;
+    const grandTotal = document.getElementById('grand-total').innerText;
 
     const couponCodeElement = document.getElementById('coupon-code').value;
     if (couponCodeElement === "Coupon 20") {
-        totalBudget = sum * 0.2;
-        document.getElementById('total-price').innerText = totalBudget;
+        totalBudget = convertedTotalPrice - (convertedTotalPrice * 0.2);
+        document.getElementById('grand-total').innerText = totalBudget;
     }
     else if (couponCodeElement === "NEW15") {
+        totalBudget = convertedTotalPrice - (convertedTotalPrice * 0.15);
+        document.getElementById('grand-total').innerText = totalBudget;
     }
     else {
         console.log('invalid coupon');
