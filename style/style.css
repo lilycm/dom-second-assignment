@@ -7,7 +7,12 @@
 
 .seat-numbers{
     display:  flex;
+    flex-direction: column;
     gap: 15px;
     padding-bottom: 10px;
+}
+
+.seat-numbers li{
+    display:  flex;
     justify-content: space-around;
 }
