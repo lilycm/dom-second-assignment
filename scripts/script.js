@@ -70,22 +70,29 @@ for (const seat of allSeatNumber) {
 
 const aplyCouponButton = document.getElementById('aply');
 aplyCouponButton.addEventListener('click', function () {
+    // total price
 
     const fixedPrice = document.getElementById('fixed-price').innerText;
+    let totalBudget = 0;
 
     const totalPrice = document.getElementById('total-price').innerText;
     const convertedTotalPrice = parseInt(totalPrice);
     let sum = convertedTotalPrice + parseInt(fixedPrice);
-    document.getElementById('total-price').innerText = sum;
+
+
+    // grand total
+
+    // const grandTotal = document.getElementById('grand-total').innerText;
+    // const convertedGrandTotal = parseInt(grandTotal);
+    // let sum2 = convertedGrandTotal + parseInt(fixedPrice);
+    // document.getElementById('grand-total').innerText = sum2;
 
     const couponCodeElement = document.getElementById('coupon-code').value;
     if (couponCodeElement === "Coupon 20") {
-        sum = sum * 20 / 100;
-        console.log(sum);
+        totalBudget = sum * 0.2;
+        document.getElementById('total-price').innerText = totalBudget;
     }
     else if (couponCodeElement === "NEW15") {
-        sum = sum * 15 / 100;
-        console.log(sum);
     }
     else {
         console.log('invalid coupon');
