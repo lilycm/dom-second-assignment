@@ -4,12 +4,20 @@
 const allSeatNumber = document.getElementsByClassName('seat-number');
 
 let seatCount = 0;
+let totalSeatBuy = 0;
 
 
 for (const seat of allSeatNumber) {
     seat.addEventListener('click', function (e) {
         const seatBg = e.target.parentNode.classList.remove('bg-[#F7F8F8]');
         const seatBg2 = e.target.parentNode.classList.add('bg-[#1DD100]');
+
+        totalSeatBuy++;
+        if (totalSeatBuy > 4) {
+            alert('Oops!!! You can only buy 4 seat');
+            const seatBg2 = e.target.parentNode.classList.remove('bg-[#1DD100]')
+            return;
+        }
 
         seatCount = seatCount + 1;
         document.getElementById('seat-count').innerText = seatCount;
@@ -33,21 +41,63 @@ for (const seat of allSeatNumber) {
         li.appendChild(p3);
         seatDetail.appendChild(li);
 
+        // check coupon
+
         const fixedPrice = document.getElementById('fixed-price').innerText;
         const convertedFixedPrice = parseInt(fixedPrice);
         document.getElementById('fixed-price').innerText = convertedFixedPrice;
 
+        // total budget
         const totalPrice = document.getElementById('total-price').innerText;
         const convertedTotalPrice = parseInt(totalPrice);
         const sum = convertedTotalPrice + convertedFixedPrice;
         document.getElementById('total-price').innerText = sum;
-        console.log(sum);
 
-
+        //grand total
+        const grandTotal = document.getElementById('grand-total').innerText;
+        const convertedGrandTotal = parseInt(grandTotal);
+        const sum2 = convertedGrandTotal + parseInt(fixedPrice);
+        document.getElementById('grand-total').innerText = sum2;
 
         const totalSeat = document.getElementById('total-seat').innerText;
         const convertedTotalSeat = parseInt(totalSeat);
         const updateSeat = convertedTotalSeat - 1;
         document.getElementById('total-seat').innerText = updateSeat;
+
     })
 }
+
+
+const aplyCouponButton = document.getElementById('aply');
+aplyCouponButton.addEventListener('click', function () {
+
+    const fixedPrice = document.getElementById('fixed-price').innerText;
+
+    const totalPrice = document.getElementById('total-price').innerText;
+    const convertedTotalPrice = parseInt(totalPrice);
+    let sum = convertedTotalPrice + parseInt(fixedPrice);
+    document.getElementById('total-price').innerText = sum;
+
+    const couponCodeElement = document.getElementById('coupon-code').value;
+    if (couponCodeElement === "Coupon 20") {
+        sum = sum * 20 / 100;
+        console.log(sum);
+    }
+    else if (couponCodeElement === "NEW15") {
+        sum = sum * 15 / 100;
+        console.log(sum);
+    }
+    else {
+        console.log('invalid coupon');
+    }
+})
+
+
+document.getElementById('buy-ticket').addEventListener('click', function (e) {
+    e.preventDefault();
+    document.querySelector('#booking-seat').scrollIntoView({
+        behavior: "smooth"
+    })
+})
+
+

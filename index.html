@@ -63,7 +63,7 @@
                     view the results directly within the app. The integrated testing features allow for a streamlined .
                 </p>
                 <div>
-                    <button class="bg-green-500 px-5 py-4 text-xl font-semibold rounded-lg">Buy Tickets</button>
+                    <button id="buy-ticket" class="bg-green-500 px-5 py-4 text-xl font-semibold rounded-lg"><a href="#booking-seat">Buy Tickets</a></button>
                 </div>
             </div>
         </div>
@@ -137,7 +137,7 @@
                     All Offers</button>
             </div>
         </section>
-        <section class=" mt-10 bg-[#F7F8F8] lg:mt-28 py-8 lg:py-16 rounded-t-[88px] border border-t-[#1DD100]">
+        <section id="booking-seat" class=" mt-10 bg-[#F7F8F8] lg:mt-28 py-8 lg:py-16 rounded-t-[88px] border border-t-[#1DD100]">
             <div class="text-center space-y-3">
                 <h1 class="text-3xl font-inter font-bold ">P.H Paribahan</h1>
                 <p class="text-[#03071299] text-base font-normal font-inter w-9/12 mx-auto">Yes, you can run unit tests
@@ -474,9 +474,9 @@
 
                         <!-- cupon input field -->
                         <div class="my-5 flex lg:px-14">
-                            <input class="text-[#03071266] py-4 w-full px-3" type="text"
+                            <input id="coupon-code" class="text-[#03071266] py-4 w-full px-3" type="text"
                                 placeholder="Have any copupon?">
-                            <button class="bg-[#1DD100] px-5 py-3 text-lg text-white rounded">Aply</button>
+                            <button id="aply" class="bg-[#1DD100] px-5 py-3 text-lg text-white rounded">Aply</button>
                         </div>
 
                         <!-- grand total -->
@@ -495,25 +495,50 @@
                         </div>
                         <div class="mt-4">
                             <label class="font-inter font-bold text-base" for="name">Phone Number*</label> <br>
-                            <input class="text-[#03071266] py-4 w-full px-3 border rounded-lg" type="number" required
+                            <input id="phone-number" class="text-[#03071266] py-4 w-full px-3 border rounded-lg" type="number" required
                                 placeholder="Enter your phone number">
                         </div>
                         <div class="mt-4">
                             <label class="font-inter font-bold text-base" for="name">Email Id</label> <br>
-                            <input class="text-[#03071266] py-4 w-full px-3 border rounded-lg" type="email" required
+                            <input class="text-[#03071266] py-4 w-full px-3 border rounded-lg" id="email" type="email" required
                                 placeholder="Enter your email">
                         </div>
                         <!-- next button -->
                         <div class="bg-[#1DD100] rounded-lg mt-7 py-3 text-center">
-                            <button class="text-lg font-inter font-bold text-white">Next</button>
+                            <button onclick="my_modal_1.showModal()" class="text-lg font-inter font-bold text-white">Next</button>
+                            <!-- Open the modal using ID.showModal() method -->
+                            <dialog id="my_modal_1" class="modal">
+                                <div class="modal-box">
+                                    <div class="flex flex-col justify-center">
+                                        <img class="w-fit mx-auto" src="images/success.png" alt="">
+                                    </div>
+                                    <h3 class="font-bold text-2xl uppercase text-[#27AE60] mt-4">Success</h3>
+                                    <p class="py-4 text-lg font-bold font-inter">Thank you for Booking Our Bus Seats. 
+                                        We are working hard to find the best service and deals for you. 
+                                    </p>
+                                    <span class="text-base text-[#4A4A4A] font-normal font-inter">Shortly you will find a confirmation in your email.</span>
+                                    <div class="modal-action flex flex-col justify-center">
+                                        <form method="dialog">
+                                            <!-- if there is a button in form, it will close the modal -->
+                                            <button class="bg-[#27AE60] px-8 py-5 rounded-full font-bold text-white text-lg ">Continue</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </dialog>
                         </div>
 
                         <div class="mt-7 flex lg:flex-row flex-col lg:justify-around text-center">
                             <p><a href=""><u class="text-[#03071299] font-bold text-base font-inter">Terms and
-                                        Conditions</u></a></p>
+                                        Conditions
+                                    </u>
+                                </a>
+                            </p>
 
                             <p><a href=""><u class="text-[#03071299] font-bold text-base font-inter">Cancellation
-                                        Policy</u></a></p>
+                                        Policy
+                                    </u>
+                                </a>
+                            </p>
                         </div>
                     </div>
                 </div>
