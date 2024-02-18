@@ -146,7 +146,8 @@
             </div>
             <div class="lg:px-12 mt-12">
                 <div class="flex lg:flex-row flex-col items-center justify-center">
-                    <div class="bg-white px-4 py-6 lg:px-10 lg:py-10 rounded-lg border-r-2 border-[#1DD100] border-dashed">
+                    <div
+                        class="bg-white px-4 py-6 lg:px-10 lg:py-10 rounded-lg border-r-2 border-[#1DD100] border-dashed">
                         <div class="flex flex-col lg:flex-row gap-7 justify-center items-center">
                             <div class="flex flex-col lg:flex-row items-center gap-5 justify-center">
                                 <div>
@@ -174,16 +175,19 @@
                                 <p class="font-inter text-lg font-bold pb-4">Dhaka - Sylhet</p>
                             </div>
                             <div class="flex items-center justify-between border-b-2 border-[#03071233] border-dashed">
-                                <p class="text-[#03071299] font-inter text-base font-normal pb-3 pt-5">Departure Time</p>
+                                <p class="text-[#03071299] font-inter text-base font-normal pb-3 pt-5">Departure Time
+                                </p>
                                 <p class="font-inter text-lg font-bold pb-3 pt-5">9:00 PM</p>
                             </div>
 
                             <div class="mt-6 flex flex-col lg:flex-row gap-6">
                                 <div class="bg-[#0307120D] px-4 py-2 rounded-lg text-center">
-                                    <p class="font-bold font-inter text-base text-[#030712CC]">Boarding Point - Laxmipur</p>
+                                    <p class="font-bold font-inter text-base text-[#030712CC]">Boarding Point - Laxmipur
+                                    </p>
                                 </div>
                                 <div class="bg-[#0307120D] px-4 py-2 rounded-lg text-center">
-                                    <p class="font-bold font-inter text-base text-[#030712CC]">Dropping Point - Bogura</p>
+                                    <p class="font-bold font-inter text-base text-[#030712CC]">Dropping Point - Bogura
+                                    </p>
                                 </div>
                                 <div class="bg-[#0307120D] px-4 py-2 rounded-lg text-center">
                                     <p class="font-bold font-inter text-base text-[#030712CC]">Est. Time - 11 Hour</p>
@@ -203,22 +207,346 @@
         </section>
 
         <section class="mt-7 bg-[#F7F8F8]">
-            <div class="bg-white lg:px-12">
-                <h3 class="text-2xl font-inter font-bold text-[#030712]">Select Your Seat</h3>
-                <div class="border-y-2 border-dashed flex flex-col lg:flex-row justify-between">
-                    <div class="flex gap-2">
-                        <img src="images/seat-gray.png" alt="">
-                        <p class="text-[#03071280] font-inter text-lg font-semibold">Available</p>
+            <div class="flex flex-col lg:flex-row px-3">
+                <div class="flex-1 bg-white lg:px-12 border-r-2 border-[#0307124D] border-dashed">
+                    <h3 class="text-2xl font-inter font-bold text-[#030712] pb-3">Select Your Seat</h3>
+                    <div class="border-y-2 border-dashed flex flex-col lg:flex-row justify-between">
+                        <div class="flex gap-2 py-3">
+                            <img src="images/seat-gray.png" alt="">
+                            <p class="text-[#03071280] font-inter text-lg font-semibold">Available</p>
+                        </div>
+                        <div class="flex gap-2 py-3">
+                            <img src="images/seat-green-filled.png" alt="">
+                            <p class="text-[#1DD100] font-inter text-lg font-semibold">Selected</p>
+                        </div>
                     </div>
-                    <div class="flex gap-2">
-                        <img src="images/seat-green-filled.png" alt="">
-                        <p class="text-[#1DD100] font-inter text-lg font-semibold">Selected</p>
+                    <div class="py-3 flex justify-end">
+                        <img class="bg-[#0307121A] px-7 py-3 rounded-lg" src="images/spearing.png" alt="">
+                    </div>
+
+                    <!-- bust seat -->
+                    <div>
+                        <div class="grid grid-cols-2 lg:grid-cols-5 md:grid-cols-2 gap-4">
+                            <div class="px-5 py-3">
+                                <h3 class="text-[#03071280] text-lg font-semibold font-inter text-center">A</h3>
+                            </div>
+                            <div class="bg-[#F7F8F8] px-5 py-3 text-center">
+                                <button id="A1"
+                                    class="text-[#03071280] text-lg font-semibold font-inter rounded-lg">A1</button>
+                            </div>
+                            <div class="bg-[#F7F8F8] px-5 py-3 text-center">
+                                <button id="A2"
+                                    class="text-[#03071280] text-lg font-semibold font-inter rounded-lg">A2</button>
+                            </div>
+                            <div class="bg-[#F7F8F8] px-5 py-3 text-center">
+                                <button id="A3"
+                                    class="text-[#03071280] text-lg font-semibold font-inter rounded-lg">A3</button>
+                            </div>
+                            <div class="bg-[#F7F8F8] px-5 py-3 text-center">
+                                <button id="A4"
+                                    class="text-[#03071280] text-lg font-semibold font-inter rounded-lg">A4</button>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 lg:grid-cols-5 md:grid-cols-2 gap-4 my-4">
+                            <div class="px-5 py-3">
+                                <h3 class="text-[#03071280] text-lg font-semibold font-inter text-center">B</h3>
+                            </div>
+                            <div class="bg-[#F7F8F8] px-5 py-3 text-center">
+                                <button id="B1"
+                                    class="text-[#03071280] text-lg font-semibold font-inter rounded-lg">B1</button>
+                            </div>
+                            <div class="bg-[#F7F8F8] px-5 py-3 text-center">
+                                <button id="B2"
+                                    class="text-[#03071280] text-lg font-semibold font-inter rounded-lg">B2</button>
+                            </div>
+                            <div class="bg-[#F7F8F8] px-5 py-3 text-center">
+                                <button id="B3"
+                                    class="text-[#03071280] text-lg font-semibold font-inter rounded-lg">B3</button>
+                            </div>
+                            <div class="bg-[#F7F8F8] px-5 py-3 text-center">
+                                <button id="B4"
+                                    class="text-[#03071280] text-lg font-semibold font-inter rounded-lg">B4</button>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 lg:grid-cols-5 md:grid-cols-2 gap-4 my-4">
+                            <div class="px-5 py-3">
+                                <h3 class="text-[#03071280] text-lg font-semibold font-inter text-center">C</h3>
+                            </div>
+                            <div class="bg-[#F7F8F8] px-5 py-3 text-center">
+                                <button id="C1"
+                                    class="text-[#03071280] text-lg font-semibold font-inter rounded-lg">C1</button>
+                            </div>
+                            <div class="bg-[#F7F8F8] px-5 py-3 text-center">
+                                <button id="C2"
+                                    class="text-[#03071280] text-lg font-semibold font-inter rounded-lg">C2</button>
+                            </div>
+                            <div class="bg-[#F7F8F8] px-5 py-3 text-center">
+                                <button id="C3"
+                                    class="text-[#03071280] text-lg font-semibold font-inter rounded-lg">C3</button>
+                            </div>
+                            <div class="bg-[#F7F8F8] px-5 py-3 text-center">
+                                <button id="C4"
+                                    class="text-[#03071280] text-lg font-semibold font-inter rounded-lg">C4</button>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 lg:grid-cols-5 md:grid-cols-2 gap-4 my-4">
+                            <div class="px-5 py-3">
+                                <h3 class="text-[#03071280] text-lg font-semibold font-inter text-center">D</h3>
+                            </div>
+                            <div class="bg-[#F7F8F8] px-5 py-3 text-center">
+                                <button id="D1"
+                                    class="text-[#03071280] text-lg font-semibold font-inter rounded-lg">D1</button>
+                            </div>
+                            <div class="bg-[#F7F8F8] px-5 py-3 text-center">
+                                <button id="D2"
+                                    class="text-[#03071280] text-lg font-semibold font-inter rounded-lg">D2</button>
+                            </div>
+                            <div class="bg-[#F7F8F8] px-5 py-3 text-center">
+                                <button id="D3"
+                                    class="text-[#03071280] text-lg font-semibold font-inter rounded-lg">D3</button>
+                            </div>
+                            <div class="bg-[#F7F8F8] px-5 py-3 text-center">
+                                <button id="D4"
+                                    class="text-[#03071280] text-lg font-semibold font-inter rounded-lg">D4</button>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 lg:grid-cols-5 md:grid-cols-2 gap-4 my-4">
+                            <div class="px-5 py-3">
+                                <h3 class="text-[#03071280] text-lg font-semibold font-inter text-center">E</h3>
+                            </div>
+                            <div class="bg-[#F7F8F8] px-5 py-3 text-center">
+                                <button id="E1"
+                                    class="text-[#03071280] text-lg font-semibold font-inter rounded-lg">E1</button>
+                            </div>
+                            <div class="bg-[#F7F8F8] px-5 py-3 text-center">
+                                <button id="E2"
+                                    class="text-[#03071280] text-lg font-semibold font-inter rounded-lg">E2</button>
+                            </div>
+                            <div class="bg-[#F7F8F8] px-5 py-3 text-center">
+                                <button id="E3"
+                                    class="text-[#03071280] text-lg font-semibold font-inter rounded-lg">E3</button>
+                            </div>
+                            <div class="bg-[#F7F8F8] px-5 py-3 text-center">
+                                <button id="E4"
+                                    class="text-[#03071280] text-lg font-semibold font-inter rounded-lg">E4</button>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 lg:grid-cols-5 md:grid-cols-2 gap-4 my-4">
+                            <div class="px-5 py-3">
+                                <h3 class="text-[#03071280] text-lg font-semibold font-inter text-center">F</h3>
+                            </div>
+                            <div class="bg-[#F7F8F8] px-5 py-3 text-center">
+                                <button id="F1"
+                                    class="text-[#03071280] text-lg font-semibold font-inter rounded-lg">F1</button>
+                            </div>
+                            <div class="bg-[#F7F8F8] px-5 py-3 text-center">
+                                <button id="F2"
+                                    class="text-[#03071280] text-lg font-semibold font-inter rounded-lg">F2</button>
+                            </div>
+                            <div class="bg-[#F7F8F8] px-5 py-3 text-center">
+                                <button id="F3"
+                                    class="text-[#03071280] text-lg font-semibold font-inter rounded-lg">F3</button>
+                            </div>
+                            <div class="bg-[#F7F8F8] px-5 py-3 text-center">
+                                <button id="F4"
+                                    class="text-[#03071280] text-lg font-semibold font-inter rounded-lg">F4</button>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 lg:grid-cols-5 md:grid-cols-2 gap-4 my-4">
+                            <div class="px-5 py-3">
+                                <h3 class="text-[#03071280] text-lg font-semibold font-inter text-center">G</h3>
+                            </div>
+                            <div class="bg-[#F7F8F8] px-5 py-3 text-center">
+                                <button id="G1"
+                                    class="text-[#03071280] text-lg font-semibold font-inter rounded-lg">G1</button>
+                            </div>
+                            <div class="bg-[#F7F8F8] px-5 py-3 text-center">
+                                <button id="G2"
+                                    class="text-[#03071280] text-lg font-semibold font-inter rounded-lg">G2</button>
+                            </div>
+                            <div class="bg-[#F7F8F8] px-5 py-3 text-center">
+                                <button id="G3"
+                                    class="text-[#03071280] text-lg font-semibold font-inter rounded-lg">G3</button>
+                            </div>
+                            <div class="bg-[#F7F8F8] px-5 py-3 text-center">
+                                <button id="G4"
+                                    class="text-[#03071280] text-lg font-semibold font-inter rounded-lg">G4</button>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 lg:grid-cols-5 md:grid-cols-2 gap-4 my-4">
+                            <div class="px-5 py-3">
+                                <h3 class="text-[#03071280] text-lg font-semibold font-inter text-center">H</h3>
+                            </div>
+                            <div class="bg-[#F7F8F8] px-5 py-3 text-center">
+                                <button id="H1"
+                                    class="text-[#03071280] text-lg font-semibold font-inter rounded-lg">H1</button>
+                            </div>
+                            <div class="bg-[#F7F8F8] px-5 py-3 text-center">
+                                <button id="H2"
+                                    class="text-[#03071280] text-lg font-semibold font-inter rounded-lg">H2</button>
+                            </div>
+                            <div class="bg-[#F7F8F8] px-5 py-3 text-center">
+                                <button id="H3"
+                                    class="text-[#03071280] text-lg font-semibold font-inter rounded-lg">H3</button>
+                            </div>
+                            <div class="bg-[#F7F8F8] px-5 py-3 text-center">
+                                <button id="H4"
+                                    class="text-[#03071280] text-lg font-semibold font-inter rounded-lg">H4</button>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 lg:grid-cols-5 md:grid-cols-2 gap-4 my-4">
+                            <div class="px-5 py-3">
+                                <h3 class="text-[#03071280] text-lg font-semibold font-inter text-center">I</h3>
+                            </div>
+                            <div class="bg-[#F7F8F8] px-5 py-3 text-center">
+                                <button id="I1"
+                                    class="text-[#03071280] text-lg font-semibold font-inter rounded-lg">I1</button>
+                            </div>
+                            <div class="bg-[#F7F8F8] px-5 py-3 text-center">
+                                <button id="I2"
+                                    class="text-[#03071280] text-lg font-semibold font-inter rounded-lg">I2</button>
+                            </div>
+                            <div class="bg-[#F7F8F8] px-5 py-3 text-center">
+                                <button id="I3"
+                                    class="text-[#03071280] text-lg font-semibold font-inter rounded-lg">I3</button>
+                            </div>
+                            <div class="bg-[#F7F8F8] px-5 py-3 text-center">
+                                <button id="I4"
+                                    class="text-[#03071280] text-lg font-semibold font-inter rounded-lg">I4</button>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 lg:grid-cols-5 md:grid-cols-2 gap-4 my-4">
+                            <div class="px-5 py-3">
+                                <h3 class="text-[#03071280] text-lg font-semibold font-inter text-center">J</h3>
+                            </div>
+                            <div class="bg-[#F7F8F8] px-5 py-3 text-center">
+                                <button id="J1"
+                                    class="text-[#03071280] text-lg font-semibold font-inter rounded-lg">J1</button>
+                            </div>
+                            <div class="bg-[#F7F8F8] px-5 py-3 text-center">
+                                <button id="J2"
+                                    class="text-[#03071280] text-lg font-semibold font-inter rounded-lg">J2</button>
+                            </div>
+                            <div class="bg-[#F7F8F8] px-5 py-3 text-center">
+                                <button id="J3"
+                                    class="text-[#03071280] text-lg font-semibold font-inter rounded-lg">J3</button>
+                            </div>
+                            <div class="bg-[#F7F8F8] px-5 py-3 text-center">
+                                <button id="J4"
+                                    class="text-[#03071280] text-lg font-semibold font-inter rounded-lg">J4</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-1 px-4">
+                    <div class="pb-3 border-b-2 border-[#03071233] border-dashed">
+                        <h3 class="text-2xl font-inter font-bold text-[#030712]">Select Your Seat</h3>
+                    </div>
+
+                    <!-- seat booking -->
+                    <div>
+                        <div class="flex justify-around mt-4 border-b-2 border-[#03071233] border-dashed pb-4">
+                            <div class="indicator">
+                                <p class="font-inter font-bold text-lg">Seat</p>
+                                <div class="badge bg-[#1DD100]"><span id="seat-count"
+                                        class="text-white font-semibold">0</span></div>
+                            </div>
+                            <p class="font-inter font-bold text-lg">Class</p>
+                            <p class="font-inter font-bold text-lg">Price</p>
+                        </div>
+
+                        <!-- seat detail -->
+                        <div id="seat-numbers" class="seat-numbers border-b-2 border-[#03071233] mt-5">
+
+                        </div>
+
+                        <!-- total price -->
+                        <div class="flex justify-between items-center lg:px-14">
+                            <p class="text-lg text-[#030712] font-bold">Total Price</p>
+                            <p class="text-lg text-[#030712] font-bold">BDT <span id="total-price">0</span></p>
+                        </div>
+
+                        <!-- discount price -->
+                        <div id="discount-price" class="discount-price">
+
+                        </div>
+
+                        <!-- cupon input field -->
+                        <div class="my-5 flex lg:px-14">
+                            <input class="text-[#03071266] py-4 w-full px-3" type="text"
+                                placeholder="Have any copupon?">
+                            <button class="bg-[#1DD100] px-5 py-3 text-lg text-white rounded">Aply</button>
+                        </div>
+
+                        <!-- grand total -->
+                        <div class="flex justify-between items-center lg:px-14">
+                            <p class="text-lg text-[#030712] font-bold">Grand Total</p>
+                            <p class="text-lg text-[#030712] font-bold">BDT <span id="grand-total">0</span></p>
+                        </div>
+                    </div>
+
+                    <!-- form -->
+                    <div class="my-7 lg:px-14">
+                        <div>
+                            <label class="font-inter font-bold text-base" for="name">Passenger Name*</label> <br>
+                            <input class="text-[#03071266] py-4 w-full px-3 border rounded-lg" type="text" placeholder="Enter your name" required>
+                        </div>
+                        <div class="mt-4">
+                            <label class="font-inter font-bold text-base" for="name">Phone Number*</label> <br>
+                            <input class="text-[#03071266] py-4 w-full px-3 border rounded-lg" type="number" required placeholder="Enter your phone number">
+                        </div>
+                        <div class="mt-4">
+                            <label class="font-inter font-bold text-base" for="name">Email Id</label> <br>
+                            <input class="text-[#03071266] py-4 w-full px-3 border rounded-lg" type="email" required placeholder="Enter your email">
+                        </div>
+                        <!-- next button -->
+                        <div class="bg-[#1DD100] rounded-lg mt-7 py-3 text-center">
+                            <button class="text-lg font-inter font-bold text-white">Next</button>
+                        </div>
+
+                        <div class="mt-7 flex lg:flex-row flex-col lg:justify-around text-center">
+                            <p><a href=""><u class="text-[#03071299] font-bold text-base font-inter">Terms and Conditions</u></a></p>
+
+                            <p><a href=""><u class="text-[#03071299] font-bold text-base font-inter">Cancellation Policy</u></a></p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
     <!-- main section end -->
+
+    <!-- footer section -->
+    <footer class="bg-[#030712] lg:py-24 py-8 lg:mt-20 lg:px-20 px-4">
+        <div class="flex lg:flex-row flex-col text-center lg:text-start lg:justify-between items-center">
+            <div class="pb-5 space-y-2">
+                <h1 class="font-inter text-3xl font-bold text-white">P-Ticket</h1>
+                <p class="w-9/12 text-base text-white font-inter font-semibold text-center lg:text-start lg:mx-0 mx-auto">P-Ticket is a digital platform to make your daily commuting better.</p>
+            </div>
+            <div class="">
+                <h4 class="text-center text-lg font-semibold font-inter text-white">Download our app</h4>
+                <div class="flex gap-3 justify-center items-center bg-black border-2 border-white rounded-lg space-y-4 px-4 py-2">
+                    <img src="images/playstore.png" alt="">
+                    <div>
+                        <span class="uppercase font-bold text-base font-inter text-white">get in on</span>
+                        <h3 class="font-bold text-2xl font-inter text-white">Google Play</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="border-b-2 border-[#FFFFFF4D] border-dashed mt-8"></div>
+
+        <div class="flex lg:flex-row flex-col justify-between mt-7 text-center lg:text-start">
+            <div>
+                <p class="text-[#FFFFFFB3] font-semibold font-inter text-base">@all rights reserved, P-Ticket services limited.2024</p>
+            </div>
+            <div class="flex lg:flex-row flex-col gap-10 text-center lg:text-start">
+                <p class="text-base font-bold font-inter text-white"><a href="">Terms & condition</a></p>
+                <p class="text-base font-bold font-inter text-white"><a href="">Return & refund policy</a></p>
+                <p class="text-base font-bold font-inter text-white"><a href="">Privacy policy</a></p>
+            </div>
+        </div>
+    </footer>
 
     <!-- javascript link -->
 
