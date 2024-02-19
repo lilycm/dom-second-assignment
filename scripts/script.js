@@ -69,7 +69,7 @@ for (const seat of allSeatNumber) {
 
 
 const aplyCouponButton = document.getElementById('aply');
-aplyCouponButton.addEventListener('click', function () {
+aplyCouponButton.addEventListener('click', function (e) {
     // total price
 
     let totalBudget = 0;
@@ -93,6 +93,7 @@ aplyCouponButton.addEventListener('click', function () {
     else {
         console.log('invalid coupon');
     }
+    e.target.parentNode.classList.add('hidden');
 })
 
 
